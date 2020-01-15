@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IssueViewerActivity">
+
+    <!-- TO-DO: Use some real horizontal justification
+         or something instead of using spaces. -->
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:background="#359947"
+        android:gravity="center_vertical"
+        android:text="  PROJECT_NAME Issues"
+        android:textColor="#BAFFC5"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="fill_horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/issueScrollView"
+        app:layout_constraintStart_toStartOf="@+id/issueScrollView"
+        app:layout_constraintTop_toBottomOf="@+id/headerTextView">
+
+        <Button
+            android:id="@+id/allButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:width="137sp"
+            android:background="#777777"
+            android:text="All"
+            android:onClick="onAnyFilterButtonPressed" />
+
+        <Button
+            android:id="@+id/openButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:width="137sp"
+            android:background="#CCCCCC"
+            android:text="Open"
+            android:onClick="onAnyFilterButtonPressed" />
+
+        <Button
+            android:id="@+id/closedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:width="137sp"
+            android:background="#CCCCCC"
+            android:text="Closed"
+            android:onClick="onAnyFilterButtonPressed" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/issueScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <LinearLayout
+            android:id="@+id/issueListLinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!-- TO-DO: Use some real horizontal justification
+         or something instead of using spaces. -->
+    <TextView
+        android:id="@+id/networkInfoTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#359947"
+        android:gravity="center_vertical"
+        android:text="  "
+        android:textColor="#BAFFC5"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
