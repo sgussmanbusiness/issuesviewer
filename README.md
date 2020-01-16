@@ -6,3 +6,4 @@ This application uses two external libraries.  The first is The GitHub Java API 
 
 # Running the application
 This project may be downloaded and built in an IDE (it was developed in Android Studio), or alternatively, the side-loadable APK maay be downloaded, here: https://drive.google.com/file/d/1dlkDv2pD5wymxM7HVBCyS_2oavkdogTy/view?usp=sharing.
+To build in Android Studio, this repo should be downloaded and the project opened in Android Studio.  Then, Build>Run App (with either an Android emulator or a real Android device connected by ADB).
