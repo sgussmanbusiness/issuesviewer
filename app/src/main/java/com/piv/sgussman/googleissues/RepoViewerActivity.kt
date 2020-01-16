@@ -50,18 +50,25 @@ class RepoViewerActivity : AppCompatActivity(), View.OnScrollChangeListener{
                         // Minus 1 to get current page number, and minus 1 to get zero-indexed page number
                         curRepoButton.id = ((pagIt!!.nextPage - 2) * 20) + i
                         // Base the color of the button on the programming language of the repo project
-                        if(curPage.elementAt(i).language == "Python")
-                            curRepoButton.setBackgroundColor(Color.BLUE)
-                        else if(curPage.elementAt(i).language == "C++")
-                            curRepoButton.setBackgroundColor(Color.MAGENTA)
-                        else if(curPage.elementAt(i).language == "Java")
-                            curRepoButton.setBackgroundColor(Color.DKGRAY)
-                        else if(curPage.elementAt(i).language == "Go")
-                            curRepoButton.setBackgroundColor(Color.CYAN)
-                        else if(curPage.elementAt(i).language == "JavaScript")
-                            curRepoButton.setBackgroundColor(Color.YELLOW)
-                        else
-                            curRepoButton.setBackgroundColor(Color.LTGRAY)
+                        if(curPage.elementAt(i).language == "Python"){
+                            curRepoButton.setBackgroundColor(Color.parseColor("#199FFF")) // Color.BLUE
+                            curRepoButton.setTextColor(Color.parseColor("#A3D8FF"))
+                        }else if(curPage.elementAt(i).language == "C++"){
+                            curRepoButton.setBackgroundColor(Color.parseColor("#FF9BDA")) // Color.MAGENTA
+                            curRepoButton.setTextColor(Color.parseColor("#FFDBF1"))
+                        }else if(curPage.elementAt(i).language == "Java"){
+                            curRepoButton.setBackgroundColor(Color.parseColor("#CCAA92")) // Dark gray
+                            curRepoButton.setTextColor(Color.parseColor("#EAE3DE"))
+                        }else if(curPage.elementAt(i).language == "Go"){
+                            curRepoButton.setBackgroundColor(Color.parseColor("#62C0C1")) // Cyan
+                            curRepoButton.setTextColor(Color.parseColor("#CEEAEA"))
+                        }else if(curPage.elementAt(i).language == "JavaScript"){
+                            curRepoButton.setBackgroundColor(Color.parseColor("#C0C16E")) // Yellow
+                            curRepoButton.setTextColor(Color.parseColor("#EAEADA"))
+                        }else{
+                            curRepoButton.setBackgroundColor(Color.parseColor("#93CE71")) // Light gray
+                            curRepoButton.setTextColor(Color.parseColor("#D7EACC"))
+                        }
                         curRepoButton.setOnClickListener{onAnyRepoButtonPressed(curRepoButton)}
                         // curRepoButton.height = 70
                         // curRepoButton.setPadding(0, 20, 0, 20)
@@ -103,18 +110,25 @@ class RepoViewerActivity : AppCompatActivity(), View.OnScrollChangeListener{
                                 // TO-DO: What happens when nextPage is checked on the final page?
                                 curRepoButton.id = ((pagIt!!.nextPage - 2) * 20) + i
                                 // Base the color of the button on the programming language of the repo project
-                                if (curPage.elementAt(i).language == "Python")
-                                    curRepoButton.setBackgroundColor(Color.BLUE)
-                                else if (curPage.elementAt(i).language == "C++")
-                                    curRepoButton.setBackgroundColor(Color.MAGENTA)
-                                else if (curPage.elementAt(i).language == "Java")
-                                    curRepoButton.setBackgroundColor(Color.DKGRAY)
-                                else if (curPage.elementAt(i).language == "Go")
-                                    curRepoButton.setBackgroundColor(Color.CYAN)
-                                else if (curPage.elementAt(i).language == "JavaScript")
-                                    curRepoButton.setBackgroundColor(Color.YELLOW)
-                                else
-                                    curRepoButton.setBackgroundColor(Color.LTGRAY)
+                                if(curPage.elementAt(i).language == "Python"){
+                                    curRepoButton.setBackgroundColor(Color.parseColor("#199FFF")) // Color.BLUE
+                                    curRepoButton.setTextColor(Color.parseColor("#A3D8FF"))
+                                }else if(curPage.elementAt(i).language == "C++"){
+                                    curRepoButton.setBackgroundColor(Color.parseColor("#FF9BDA")) // Color.MAGENTA
+                                    curRepoButton.setTextColor(Color.parseColor("#FFDBF1"))
+                                }else if(curPage.elementAt(i).language == "Java"){
+                                    curRepoButton.setBackgroundColor(Color.parseColor("#CCAA92")) // Dark gray
+                                    curRepoButton.setTextColor(Color.parseColor("#EAE3DE"))
+                                }else if(curPage.elementAt(i).language == "Go"){
+                                    curRepoButton.setBackgroundColor(Color.parseColor("#62C0C1")) // Cyan
+                                    curRepoButton.setTextColor(Color.parseColor("#CEEAEA"))
+                                }else if(curPage.elementAt(i).language == "JavaScript"){
+                                    curRepoButton.setBackgroundColor(Color.parseColor("#C0C16E")) // Yellow
+                                    curRepoButton.setTextColor(Color.parseColor("#EAEADA"))
+                                }else{
+                                    curRepoButton.setBackgroundColor(Color.parseColor("#93CE71")) // Light gray
+                                    curRepoButton.setTextColor(Color.parseColor("#D7EACC"))
+                                }
                                 curRepoButton.setOnClickListener{onAnyRepoButtonPressed(curRepoButton)}
                                 // curRepoButton.height = 70
                                 // curRepoButton.setPadding(0, 20, 0, 20)

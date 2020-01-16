@@ -11,12 +11,12 @@
     <TextView
         android:id="@+id/headerTextView"
         android:layout_width="fill_parent"
-        android:layout_height="70dp"
-        android:background="#359947"
+        android:layout_height="60dp"
+        android:background="#EF8753"
         android:gravity="center_vertical"
         android:text="  Google GitHub Repository"
-        android:textColor="#BAFFC5"
-        android:textSize="28sp"
+        android:textColor="#E8D7CE"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,6 +40,10 @@
 
     <!-- TO-DO: Use some real horizontal justification
          or something instead of using spaces. -->
+    <!-- TO-DO: Re-enable this after it is turned into a true
+         networking label-red when disconnected, green when
+         connected, and with the last time updated. -->
+    <!--
     <TextView
         android:id="@+id/networkInfoTextView"
         android:layout_width="fill_parent"
@@ -52,5 +56,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+    -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

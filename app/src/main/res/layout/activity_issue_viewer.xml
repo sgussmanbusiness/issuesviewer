@@ -11,12 +11,12 @@
     <TextView
         android:id="@+id/headerTextView"
         android:layout_width="fill_parent"
-        android:layout_height="70dp"
-        android:background="#359947"
+        android:layout_height="60dp"
+        android:background="#EF8753"
         android:gravity="center_vertical"
         android:text="  PROJECT_NAME Issues"
-        android:textColor="#BAFFC5"
-        android:textSize="28sp"
+        android:textColor="#E8D7CE"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +35,7 @@
             android:id="@+id/allButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:width="137sp"
+            android:width="130sp"
             android:background="#777777"
             android:text="All"
             android:onClick="onAnyFilterButtonPressed" />
@@ -44,7 +44,7 @@
             android:id="@+id/openButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:width="137sp"
+            android:width="130sp"
             android:background="#CCCCCC"
             android:text="Open"
             android:onClick="onAnyFilterButtonPressed" />
@@ -53,7 +53,7 @@
             android:id="@+id/closedButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:width="137sp"
+            android:width="130sp"
             android:background="#CCCCCC"
             android:text="Closed"
             android:onClick="onAnyFilterButtonPressed" />
@@ -78,6 +78,10 @@
 
     <!-- TO-DO: Use some real horizontal justification
          or something instead of using spaces. -->
+    <!-- TO-DO: Re-enable this after it is turned into a true
+         networking label-red when disconnected, green when
+         connected, and with the last time updated. -->
+    <!--
     <TextView
         android:id="@+id/networkInfoTextView"
         android:layout_width="fill_parent"
@@ -90,5 +94,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+    -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -42,7 +42,7 @@ class IssueViewerActivity : AppCompatActivity(), View.OnScrollChangeListener{
         // Receive the name of the repository selected on the previous screen
         repoName = intent.getStringExtra("REPOSITORY_MESSAGE")
         val headerTextView = findViewById<TextView>(R.id.headerTextView)
-        headerTextView.text = "Google>" + repoName + " Issues"
+        headerTextView.text = "  " + repoName + " Issues"
 
         // Do networking away from the UI thread
         thread(true, false, null, "GitHubNetworking", -1){
@@ -67,7 +67,8 @@ class IssueViewerActivity : AppCompatActivity(), View.OnScrollChangeListener{
                         // TO-DO: Send over state from the previous Activity so as to know which language (color)
                         // Base the color of the button on the programming language of the repo project
                         // if(curPage.elementAt(i).language == "Python")
-                        curIssueButton.setBackgroundColor(Color.LTGRAY)
+                        curIssueButton.setBackgroundColor(Color.parseColor("#93CE71")) // LTGRAY
+                        curIssueButton.setTextColor(Color.parseColor("#D7EACC"))
                         // curRepoButton.height = 70
                         // curRepoButton.setPadding(0, 20, 0, 20)
                         issueListLinearLayout.addView(curIssueButton)
@@ -108,7 +109,8 @@ class IssueViewerActivity : AppCompatActivity(), View.OnScrollChangeListener{
                                 // TO-DO: What happens when nextPage is checked on the final page?
                                 curIssueButton.id = ((pagIt!!.nextPage - 2) * 20) + i
                                 // Base the color of the button on the programming language of the repo project
-                                curIssueButton.setBackgroundColor(Color.LTGRAY)
+                                curIssueButton.setBackgroundColor(Color.parseColor("#93CE71")) // LTGRAY
+                                curIssueButton.setTextColor(Color.parseColor("#D7EACC"))
                                 // curRepoButton.height = 70
                                 // curRepoButton.setPadding(0, 20, 0, 20)
                                 issueListLinearLayout.addView(curIssueButton)
@@ -182,7 +184,8 @@ class IssueViewerActivity : AppCompatActivity(), View.OnScrollChangeListener{
                         // TO-DO: Send over state from the previous Activity so as to know which language (color)
                         // Base the color of the button on the programming language of the repo project
                         // if(curPage.elementAt(i).language == "Python")
-                        curIssueButton.setBackgroundColor(Color.LTGRAY)
+                        curIssueButton.setBackgroundColor(Color.parseColor("#93CE71")) // LTGRAY
+                        curIssueButton.setTextColor(Color.parseColor("#D7EACC"))
                         // curRepoButton.height = 70
                         // curRepoButton.setPadding(0, 20, 0, 20)
                         issueListLinearLayout.addView(curIssueButton)
